@@ -10,40 +10,43 @@
     <t t-extend="PosTicket">
         <t t-jquery='.pos-sale-ticket' t-operation='replace'>
             <div class="pos-sale-ticket">
-                <div>
-                    <div style="width: 55%; float: left; padding: 20px 0px;">
-                        <t t-if="order.get_client()">
-                            Customer: <t t-esc="order.get_client().name"/><br />
-                        </t>
-                        Cashier: <t t-esc="widget.pos.cashier ? widget.pos.cashier.name : widget.pos.user.name"/><br />
-                         <t t-if="widget.pos.company.phone">
-                            Phone: <t t-esc="widget.pos.company.phone || ''"/><br />
-                        </t>
-                        <t t-esc="order.name"/>
-                        <t t-esc="moment().format('L LT')"/>
-                    </div>
-                    <div style="width: 45%;float: left; ">
-                        <img src='/web/binary/company_logo' style="width:100%"/>
-                    </div>
+                <div class="pos-center-align" style="width:100%;">
+                    <img src='/web/binary/company_logo' style="width:80%"/>
                 </div>
                 <t t-if="widget.pos.company.name">
-                    <div style="width:100%;text-align:right;"><t t-esc="widget.pos.company.name"/></div>
-                </t>
-                <t t-if="widget.pos.company.email">
-                    <div style="width:100%;text-align:right;"><t t-esc="widget.pos.company.email"/></div>
+                    <div class="pos-center-align" style="width:100%;"><t t-esc="widget.pos.company.name"/></div>
                 </t>
                 <br />
+
+                <div style="width: 100%; padding: 10px 0px;">
+                    <t t-if="order.get_client()">
+                        Customer: <t t-esc="order.get_client().name"/><br />
+                    </t>
+                        Cashier: <t t-esc="widget.pos.cashier ? widget.pos.cashier.name : widget.pos.user.name"/><br />
+                     <t t-if="widget.pos.company.phone">
+                        Phone: <t t-esc="widget.pos.company.phone || ''"/><br />
+                    </t>
+
+                    <t t-if="widget.pos.company.email">
+                        Email: <div style="width:100%;text-align:left;"><t t-esc="widget.pos.company.email"/></div>
+                    </t>
+                    <t t-esc="order.name"/>
+                    <t t-esc="moment().format('L LT')"/>
+                </div>
+                <br/>
+
                 <t t-if="receipt.header">
                     <div style='text-align:center'>
                         <t t-esc="receipt.header" />
                     </div>
                     <br/>
                 </t>
+
                 <table class='receipt-orderlines'>
                     <colgroup>
-                        <col width='40%' />
-                        <col width='15%' />
-                        <col width='15%' />
+                        <col width='36%' />
+                        <col width='12%' />
+                        <col width='22%' />
                         <col width='30%' />
                     </colgroup>
                     <tr style="border: 1px solid rgb(0, 0, 0);">
@@ -62,7 +65,7 @@
                             </t>
                         </td>
                         <td>
-                            <t t-esc="orderline.get_quantity_str_with_unit()"/>
+                            <t t-esc="orderline.quantityStr"/>
                         </td>
                         <td>
                             <t t-set="a" t-value="orderline.quantityStr"></t>
@@ -76,11 +79,12 @@
                     </tr>
                 </table>
                 <br />
+
                 <table class='receipt-total'>
                     <colgroup>
-                        <col width='40%' />
-                        <col width='30%' />
-                        <col width='30%' />
+                        <col width='28%' />
+                        <col width='47%' />
+                        <col width='25%' />
                     </colgroup>
                     <tr>
                         <td></td>
@@ -113,6 +117,7 @@
                     </tr>
                 </table>
                 <br/>
+
                 <table class='receipt-paymentlines'>
                     <colgroup>
                         <col width='38%' />

@@ -1420,7 +1420,7 @@ td {
 .pos .receipt-screen .centered-content .button {
     line-height: 40px;
     padding: 3px 13px;
-    font-size: 20px;
+    font-size: 15px;
     text-align: center;
     background: rgb(230, 230, 230);
     margin: 16px;
@@ -1438,11 +1438,11 @@ td {
 
 .pos .pos-sale-ticket {
     text-align: left;
-    width: 150px;
+    width: 170px;
     background-color: white;
-    margin: 20px;
-    padding: 15px;
-    font-size: 14px;
+    margin: 10px;
+    padding: 0px;
+    font-size: 12px;
     padding-bottom:30px;
     display: inline-block;
     font-family: "Inconsolata";
@@ -1454,7 +1454,7 @@ td {
     font-family: "Inconsolata";
 }
 .pos .pos-sale-ticket .emph{
-    font-size: 20px;
+    font-size: 15px;
     margin:5px;
 }
 .pos .pos-sale-ticket table {
@@ -1535,8 +1535,8 @@ td {
         margin-left: auto !important;
         margin-right: auto !important;
         border: none !important;
-        font-size: 13px !important;
-        width: 150px !important;
+        font-size: 12px !important;
+        width: 170px !important;
     }
     .o_debug_manager {
         display: none !important;

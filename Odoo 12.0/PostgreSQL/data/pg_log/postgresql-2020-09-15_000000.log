@@ -1,0 +1,5 @@
+2020-09-15 13:50:12 CST LOG:  received fast shutdown request
+2020-09-15 13:50:12 CST LOG:  aborting any active transactions
+2020-09-15 13:50:12 CST LOG:  autovacuum launcher shutting down
+2020-09-15 13:50:12 CST LOG:  shutting down
+2020-09-15 13:50:12 CST LOG:  database system is shut down

@@ -1,0 +1,20 @@
+2020-09-24 10:22:40 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-24 10:22:40 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-24 10:22:40 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-24 10:22:40 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-24 10:22:40 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-24 10:22:40 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-24 17:37:57 CST ERROR:  could not obtain lock on row in relation "ir_cron"
+2020-09-24 17:37:57 CST STATEMENT:  SELECT *
+	                                       FROM ir_cron
+	                                       WHERE numbercall != 0
+	                                          AND active
+	                                          AND nextcall <= (now() at time zone 'UTC')
+	                                          AND id=11
+	                                       FOR UPDATE NOWAIT

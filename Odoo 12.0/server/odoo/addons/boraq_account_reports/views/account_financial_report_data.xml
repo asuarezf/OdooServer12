@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+	<record id="account_reports.account_financial_report_cashsummary0" model="account.financial.html.report">
+        <field name="name">Cash Flow Statement</field>
+        <field name="unfold_all_filter" eval="True"/>
+        <field name="show_journal_filter" eval="True"/>
+        <field name="analytic" eval="True"/>
+        <field name='parent_id' ref='account.account_reports_legal_statements_menu'/>
+    </record>
+    
+    <record id="account_reports.account_financial_report_executivesummary0" model="account.financial.html.report">
+            <field name="name">Executive Summary</field>
+            <field name="analytic" eval="True"/>
+            <field name='parent_id' ref='account.account_reports_legal_statements_menu'/>
+            <field name="cash_basis" eval="True"/>
+     </record>
+        
+</data>
+</odoo>

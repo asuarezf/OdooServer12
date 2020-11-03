@@ -1,0 +1,180 @@
+2020-11-02 13:19:51 CST ERROR:  could not obtain lock on row in relation "ir_cron"
+2020-11-02 13:19:51 CST STATEMENT:  SELECT *
+	                                       FROM ir_cron
+	                                       WHERE numbercall != 0
+	                                          AND active
+	                                          AND nextcall <= (now() at time zone 'UTC')
+	                                          AND id=11
+	                                       FOR UPDATE NOWAIT
+2020-11-02 13:32:50 CST FATAL:  database "Valen11-01" does not exist
+2020-11-02 13:37:12 CST FATAL:  database "valen" does not exist
+2020-11-02 13:37:12 CST DETAIL:  It seems to have just been dropped or renamed.
+2020-11-02 13:37:13 CST FATAL:  database "valen" does not exist
+2020-11-02 13:37:45 CST FATAL:  database "valen" does not exist
+2020-11-02 14:16:14 CST ERROR:  could not serialize access due to concurrent update
+2020-11-02 14:16:14 CST STATEMENT:  DELETE FROM ir_attachment WHERE id IN (3339, 3338, 3186, 3184)
+2020-11-02 15:02:04 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 15:02:04 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 15:02:04 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 15:02:04 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 15:02:04 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 15:02:04 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 15:02:04 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 15:02:04 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 15:02:04 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 15:02:04 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 15:02:04 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 15:06:36 CST ERROR:  relation "ir_module_module" does not exist at character 28
+2020-11-02 15:06:36 CST STATEMENT:  SELECT latest_version FROM ir_module_module WHERE name='base'
+2020-11-02 15:06:40 CST ERROR:  relation "ir_module_module" does not exist at character 28
+2020-11-02 15:06:40 CST STATEMENT:  SELECT latest_version FROM ir_module_module WHERE name='base'
+2020-11-02 15:07:36 CST ERROR:  relation "ir_module_module" does not exist at character 28
+2020-11-02 15:07:36 CST STATEMENT:  SELECT latest_version FROM ir_module_module WHERE name='base'
+2020-11-02 15:07:41 CST ERROR:  relation "ir_module_module" does not exist at character 28
+2020-11-02 15:07:41 CST STATEMENT:  SELECT latest_version FROM ir_module_module WHERE name='base'
+2020-11-02 15:08:11 CST ERROR:  database "test12_v1" is being accessed by other users
+2020-11-02 15:08:11 CST DETAIL:  There is 1 other session using the database.
+2020-11-02 15:08:11 CST STATEMENT:  DROP DATABASE test12_v1;
+	
+2020-11-02 15:08:20 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 15:08:59 CST FATAL:  database "valen_test1101" does not exist
+2020-11-02 15:27:28 CST FATAL:  password authentication failed for user "test12"
+2020-11-02 15:27:28 CST DETAIL:  Connection matched pg_hba.conf line 82: "host    all             all             ::1/128                 md5"
+2020-11-02 15:27:29 CST FATAL:  password authentication failed for user "test12"
+2020-11-02 15:27:29 CST DETAIL:  Connection matched pg_hba.conf line 82: "host    all             all             ::1/128                 md5"
+2020-11-02 15:27:36 CST FATAL:  password authentication failed for user "test12"
+2020-11-02 15:27:36 CST DETAIL:  Connection matched pg_hba.conf line 82: "host    all             all             ::1/128                 md5"
+2020-11-02 15:27:36 CST FATAL:  password authentication failed for user "test12"
+2020-11-02 15:27:36 CST DETAIL:  Connection matched pg_hba.conf line 82: "host    all             all             ::1/128                 md5"
+2020-11-02 15:27:42 CST FATAL:  password authentication failed for user "test12"
+2020-11-02 15:27:42 CST DETAIL:  Connection matched pg_hba.conf line 82: "host    all             all             ::1/128                 md5"
+2020-11-02 15:27:42 CST FATAL:  password authentication failed for user "test12"
+2020-11-02 15:27:42 CST DETAIL:  Connection matched pg_hba.conf line 82: "host    all             all             ::1/128                 md5"
+2020-11-02 15:29:00 CST FATAL:  database "test12" does not exist
+2020-11-02 15:30:23 CST ERROR:  relation "ir_module_module" does not exist at character 28
+2020-11-02 15:30:23 CST STATEMENT:  SELECT latest_version FROM ir_module_module WHERE name='base'
+2020-11-02 15:30:25 CST ERROR:  relation "ir_module_module" does not exist at character 28
+2020-11-02 15:30:25 CST STATEMENT:  SELECT latest_version FROM ir_module_module WHERE name='base'
+2020-11-02 15:31:23 CST ERROR:  relation "ir_module_module" does not exist at character 28
+2020-11-02 15:31:23 CST STATEMENT:  SELECT latest_version FROM ir_module_module WHERE name='base'
+2020-11-02 15:31:26 CST ERROR:  relation "ir_module_module" does not exist at character 28
+2020-11-02 15:31:26 CST STATEMENT:  SELECT latest_version FROM ir_module_module WHERE name='base'
+2020-11-02 15:32:23 CST ERROR:  relation "ir_module_module" does not exist at character 28
+2020-11-02 15:32:23 CST STATEMENT:  SELECT latest_version FROM ir_module_module WHERE name='base'
+2020-11-02 15:32:27 CST ERROR:  relation "ir_module_module" does not exist at character 28
+2020-11-02 15:32:27 CST STATEMENT:  SELECT latest_version FROM ir_module_module WHERE name='base'
+2020-11-02 15:33:23 CST ERROR:  relation "ir_module_module" does not exist at character 28
+2020-11-02 15:33:23 CST STATEMENT:  SELECT latest_version FROM ir_module_module WHERE name='base'
+2020-11-02 15:33:28 CST ERROR:  relation "ir_module_module" does not exist at character 28
+2020-11-02 15:33:28 CST STATEMENT:  SELECT latest_version FROM ir_module_module WHERE name='base'
+2020-11-02 15:33:35 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 15:36:27 CST FATAL:  database "valen" does not exist
+2020-11-02 15:36:41 CST FATAL:  database "valen" does not exist
+2020-11-02 15:39:14 CST FATAL:  database "valen_10-31" does not exist
+2020-11-02 15:42:58 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 15:42:58 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 15:42:58 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 15:42:58 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 15:42:58 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 15:54:46 CST FATAL:  database "valen" does not exist
+2020-11-02 15:55:58 CST FATAL:  database "valen_11-01" does not exist
+2020-11-02 16:04:33 CST ERROR:  could not serialize access due to concurrent update
+2020-11-02 16:04:33 CST STATEMENT:  DELETE FROM ir_attachment WHERE id IN (3339, 3338, 3186, 3184)
+2020-11-02 16:15:14 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 16:15:14 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 16:15:14 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 16:15:14 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 16:15:14 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 16:15:14 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 16:15:14 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 16:15:14 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 16:15:14 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 16:15:14 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 16:15:14 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 16:15:14 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 16:15:14 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 16:25:08 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 16:25:08 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 16:25:08 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 16:25:08 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 16:25:08 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 16:25:08 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 16:25:08 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 16:32:35 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 16:32:35 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 16:32:35 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 16:32:35 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 16:32:35 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 16:32:35 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 16:32:35 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 16:32:35 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 16:36:29 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 16:36:29 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 16:36:29 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 16:36:29 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 16:36:29 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 16:36:29 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 16:40:01 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 16:40:01 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 16:40:01 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 16:40:01 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 16:40:01 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-11-02 16:40:01 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	

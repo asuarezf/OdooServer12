@@ -1,0 +1,16 @@
+2020-10-14 17:38:38 CST LOG:  received fast shutdown request
+2020-10-14 17:38:38 CST LOG:  aborting any active transactions
+2020-10-14 17:38:38 CST LOG:  autovacuum launcher shutting down
+2020-10-14 17:38:38 CST ERROR:  canceling statement due to user request
+2020-10-14 17:38:38 CST LOG:  autovacuum launcher shutting down
+2020-10-14 17:38:39 CST FATAL:  terminating connection due to administrator command
+2020-10-14 17:38:39 CST FATAL:  terminating connection due to administrator command
+2020-10-14 17:38:39 CST FATAL:  terminating connection due to administrator command
+2020-10-14 17:38:39 CST FATAL:  terminating connection due to administrator command
+2020-10-14 17:38:39 CST FATAL:  terminating connection due to administrator command
+2020-10-14 17:38:39 CST FATAL:  terminating connection due to administrator command
+2020-10-14 17:38:39 CST FATAL:  terminating connection due to administrator command
+2020-10-14 17:38:39 CST FATAL:  terminating connection due to administrator command
+2020-10-14 17:38:39 CST FATAL:  terminating connection due to administrator command
+2020-10-14 17:38:40 CST LOG:  shutting down
+2020-10-14 17:38:42 CST LOG:  database system is shut down

@@ -1,0 +1,1878 @@
+2020-09-26 08:46:04 CST ERROR:  null value in column "name" violates not-null constraint
+2020-09-26 08:46:04 CST DETAIL:  Failing row contains (3, null, null, 1, null, 2, 2, 2020-09-26 00:46:04.16011, 2, 2020-09-26 00:46:04.16011).
+2020-09-26 08:46:04 CST STATEMENT:  INSERT INTO "hr_payroll_structure" ("id", "create_uid", "create_date", "write_uid", "write_date", "company_id", "parent_id") VALUES (nextval('hr_payroll_structure_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), 1, 2) RETURNING id
+2020-09-26 08:46:04 CST ERROR:  null value in column "name" violates not-null constraint
+2020-09-26 08:46:04 CST DETAIL:  Failing row contains (5, null, null, 1, null, 4, 2, 2020-09-26 00:46:04.16011, 2, 2020-09-26 00:46:04.16011).
+2020-09-26 08:46:04 CST STATEMENT:  INSERT INTO "hr_payroll_structure" ("id", "create_uid", "create_date", "write_uid", "write_date", "company_id", "parent_id") VALUES (nextval('hr_payroll_structure_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), 1, 4) RETURNING id
+2020-09-26 08:52:32 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 08:52:32 CST DETAIL:  Failing row contains (4, Basic Salary, BASIC, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, null, null, 2, 2020-09-26 00:52:32.697392, 2, 2020-09-26 00:52:32.697392).
+2020-09-26 08:52:32 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "register_id", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'BASIC', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'Basic Salary', '1.0', NULL, 5) RETURNING id
+2020-09-26 08:52:32 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 08:52:32 CST DETAIL:  Failing row contains (5, Basic Salary, BASIC, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, null, null, 2, 2020-09-26 00:52:32.697392, 2, 2020-09-26 00:52:32.697392).
+2020-09-26 08:52:32 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "register_id", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'BASIC', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'Basic Salary', '1.0', NULL, 5) RETURNING id
+2020-09-26 08:52:32 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 08:52:32 CST DETAIL:  Failing row contains (6, Labor Insurance employee 2020, LI-20, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, null, null, 2, 2020-09-26 00:52:32.697392, 2, 2020-09-26 00:52:32.697392).
+2020-09-26 08:52:32 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'LI-20', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'Labor Insurance employee 2020', '1.0', 5) RETURNING id
+2020-09-26 08:52:32 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 08:52:32 CST DETAIL:  Failing row contains (7, IRS, IRS, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, null, null, 2, 2020-09-26 00:52:32.697392, 2, 2020-09-26 00:52:32.697392).
+2020-09-26 08:52:32 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'IRS', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'IRS', '1.0', 5) RETURNING id
+2020-09-26 08:52:32 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 08:52:32 CST DETAIL:  Failing row contains (8, Health Fee employee 2020, HFE-20, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, null, null, 2, 2020-09-26 00:52:32.697392, 2, 2020-09-26 00:52:32.697392).
+2020-09-26 08:52:32 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'HFE-20', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'Health Fee employee 2020', '1.0', 5) RETURNING id
+2020-09-26 08:52:32 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 08:52:32 CST DETAIL:  Failing row contains (9, Labor Insurance Company 2020, LIC-20, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, null, null, 2, 2020-09-26 00:52:32.697392, 2, 2020-09-26 00:52:32.697392).
+2020-09-26 08:52:32 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'LIC-20', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'Labor Insurance Company 2020', '1.0', 5) RETURNING id
+2020-09-26 08:52:32 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 08:52:32 CST DETAIL:  Failing row contains (10, Health Fee Company 2020, HFC-20, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, null, null, 2, 2020-09-26 00:52:32.697392, 2, 2020-09-26 00:52:32.697392).
+2020-09-26 08:52:32 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'HFC-20', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'Health Fee Company 2020', '1.0', 5) RETURNING id
+2020-09-26 08:52:32 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 08:52:32 CST DETAIL:  Failing row contains (11, Adjustment, ADJ, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, null, null, 2, 2020-09-26 00:52:32.697392, 2, 2020-09-26 00:52:32.697392).
+2020-09-26 08:52:32 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "register_id", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'ADJ', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'Adjustment', '1.0', NULL, 5) RETURNING id
+2020-09-26 08:52:32 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 08:52:32 CST DETAIL:  Failing row contains (12, Bonus, BN, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, null, null, 2, 2020-09-26 00:52:32.697392, 2, 2020-09-26 00:52:32.697392).
+2020-09-26 08:52:32 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "register_id", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'BN', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'Bonus', '1.0', NULL, 5) RETURNING id
+2020-09-26 08:52:32 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 08:52:32 CST DETAIL:  Failing row contains (13, Pension 2020, PensionC-20, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, null, null, 2, 2020-09-26 00:52:32.697392, 2, 2020-09-26 00:52:32.697392).
+2020-09-26 08:52:32 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'PensionC-20', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'Pension 2020', '1.0', 5) RETURNING id
+2020-09-26 08:52:32 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 08:52:32 CST DETAIL:  Failing row contains (14, Net Salary, NET, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, null, null, 2, 2020-09-26 00:52:32.697392, 2, 2020-09-26 00:52:32.697392).
+2020-09-26 08:52:32 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'NET', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'Net Salary', '1.0', 5) RETURNING id
+2020-09-26 08:53:50 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 08:53:50 CST DETAIL:  Failing row contains (15, Basic Salary, BASIC, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, null, null, 2, 2020-09-26 00:53:50.487838, 2, 2020-09-26 00:53:50.487838).
+2020-09-26 08:53:50 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "register_id", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'BASIC', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'Basic Salary', '1.0', NULL, 5) RETURNING id
+2020-09-26 08:53:50 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 08:53:50 CST DETAIL:  Failing row contains (16, Basic Salary, BASIC, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, null, null, 2, 2020-09-26 00:53:50.487838, 2, 2020-09-26 00:53:50.487838).
+2020-09-26 08:53:50 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "register_id", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'BASIC', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'Basic Salary', '1.0', NULL, 5) RETURNING id
+2020-09-26 08:53:50 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 08:53:50 CST DETAIL:  Failing row contains (17, Labor Insurance employee 2020, LI-20, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, null, null, 2, 2020-09-26 00:53:50.487838, 2, 2020-09-26 00:53:50.487838).
+2020-09-26 08:53:50 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'LI-20', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'Labor Insurance employee 2020', '1.0', 5) RETURNING id
+2020-09-26 08:53:50 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 08:53:50 CST DETAIL:  Failing row contains (18, IRS, IRS, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, null, null, 2, 2020-09-26 00:53:50.487838, 2, 2020-09-26 00:53:50.487838).
+2020-09-26 08:53:50 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'IRS', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'IRS', '1.0', 5) RETURNING id
+2020-09-26 08:53:50 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 08:53:50 CST DETAIL:  Failing row contains (19, Health Fee employee 2020, HFE-20, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, null, null, 2, 2020-09-26 00:53:50.487838, 2, 2020-09-26 00:53:50.487838).
+2020-09-26 08:53:50 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'HFE-20', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'Health Fee employee 2020', '1.0', 5) RETURNING id
+2020-09-26 08:53:50 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 08:53:50 CST DETAIL:  Failing row contains (20, Labor Insurance Company 2020, LIC-20, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, null, null, 2, 2020-09-26 00:53:50.487838, 2, 2020-09-26 00:53:50.487838).
+2020-09-26 08:53:50 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'LIC-20', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'Labor Insurance Company 2020', '1.0', 5) RETURNING id
+2020-09-26 08:53:50 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 08:53:50 CST DETAIL:  Failing row contains (21, Health Fee Company 2020, HFC-20, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, null, null, 2, 2020-09-26 00:53:50.487838, 2, 2020-09-26 00:53:50.487838).
+2020-09-26 08:53:50 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'HFC-20', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'Health Fee Company 2020', '1.0', 5) RETURNING id
+2020-09-26 08:53:50 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 08:53:50 CST DETAIL:  Failing row contains (22, Adjustment, ADJ, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, null, null, 2, 2020-09-26 00:53:50.487838, 2, 2020-09-26 00:53:50.487838).
+2020-09-26 08:53:50 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "register_id", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'ADJ', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'Adjustment', '1.0', NULL, 5) RETURNING id
+2020-09-26 08:53:50 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 08:53:50 CST DETAIL:  Failing row contains (23, Bonus, BN, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, null, null, 2, 2020-09-26 00:53:50.487838, 2, 2020-09-26 00:53:50.487838).
+2020-09-26 08:53:50 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "register_id", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'BN', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'Bonus', '1.0', NULL, 5) RETURNING id
+2020-09-26 08:53:50 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 08:53:50 CST DETAIL:  Failing row contains (24, Pension 2020, PensionC-20, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, null, null, 2, 2020-09-26 00:53:50.487838, 2, 2020-09-26 00:53:50.487838).
+2020-09-26 08:53:50 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'PensionC-20', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'Pension 2020', '1.0', 5) RETURNING id
+2020-09-26 08:53:50 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 08:53:50 CST DETAIL:  Failing row contains (25, Net Salary, NET, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, null, null, 2, 2020-09-26 00:53:50.487838, 2, 2020-09-26 00:53:50.487838).
+2020-09-26 08:53:50 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'NET', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'Net Salary', '1.0', 5) RETURNING id
+2020-09-26 08:54:06 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 08:54:06 CST DETAIL:  Failing row contains (26, Basic Salary, BASIC, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, null, null, 2, 2020-09-26 00:54:06.031938, 2, 2020-09-26 00:54:06.031938).
+2020-09-26 08:54:06 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "register_id", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'BASIC', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'Basic Salary', '1.0', NULL, 5) RETURNING id
+2020-09-26 08:54:06 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 08:54:06 CST DETAIL:  Failing row contains (27, Basic Salary, BASIC, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, null, null, 2, 2020-09-26 00:54:06.031938, 2, 2020-09-26 00:54:06.031938).
+2020-09-26 08:54:06 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "register_id", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'BASIC', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'Basic Salary', '1.0', NULL, 5) RETURNING id
+2020-09-26 08:54:06 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 08:54:06 CST DETAIL:  Failing row contains (28, Labor Insurance employee 2020, LI-20, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, null, null, 2, 2020-09-26 00:54:06.031938, 2, 2020-09-26 00:54:06.031938).
+2020-09-26 08:54:06 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'LI-20', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'Labor Insurance employee 2020', '1.0', 5) RETURNING id
+2020-09-26 08:54:06 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 08:54:06 CST DETAIL:  Failing row contains (29, IRS, IRS, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, null, null, 2, 2020-09-26 00:54:06.031938, 2, 2020-09-26 00:54:06.031938).
+2020-09-26 08:54:06 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'IRS', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'IRS', '1.0', 5) RETURNING id
+2020-09-26 08:54:06 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 08:54:06 CST DETAIL:  Failing row contains (30, Health Fee employee 2020, HFE-20, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, null, null, 2, 2020-09-26 00:54:06.031938, 2, 2020-09-26 00:54:06.031938).
+2020-09-26 08:54:06 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'HFE-20', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'Health Fee employee 2020', '1.0', 5) RETURNING id
+2020-09-26 08:54:06 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 08:54:06 CST DETAIL:  Failing row contains (31, Labor Insurance Company 2020, LIC-20, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, null, null, 2, 2020-09-26 00:54:06.031938, 2, 2020-09-26 00:54:06.031938).
+2020-09-26 08:54:06 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'LIC-20', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'Labor Insurance Company 2020', '1.0', 5) RETURNING id
+2020-09-26 08:54:06 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 08:54:06 CST DETAIL:  Failing row contains (32, Health Fee Company 2020, HFC-20, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, null, null, 2, 2020-09-26 00:54:06.031938, 2, 2020-09-26 00:54:06.031938).
+2020-09-26 08:54:06 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'HFC-20', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'Health Fee Company 2020', '1.0', 5) RETURNING id
+2020-09-26 08:54:06 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 08:54:06 CST DETAIL:  Failing row contains (33, Adjustment, ADJ, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, null, null, 2, 2020-09-26 00:54:06.031938, 2, 2020-09-26 00:54:06.031938).
+2020-09-26 08:54:06 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "register_id", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'ADJ', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'Adjustment', '1.0', NULL, 5) RETURNING id
+2020-09-26 08:54:06 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 08:54:06 CST DETAIL:  Failing row contains (34, Bonus, BN, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, null, null, 2, 2020-09-26 00:54:06.031938, 2, 2020-09-26 00:54:06.031938).
+2020-09-26 08:54:06 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "register_id", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'BN', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'Bonus', '1.0', NULL, 5) RETURNING id
+2020-09-26 08:54:06 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 08:54:06 CST DETAIL:  Failing row contains (35, Pension 2020, PensionC-20, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, null, null, 2, 2020-09-26 00:54:06.031938, 2, 2020-09-26 00:54:06.031938).
+2020-09-26 08:54:06 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'PensionC-20', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'Pension 2020', '1.0', 5) RETURNING id
+2020-09-26 08:54:06 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 08:54:06 CST DETAIL:  Failing row contains (36, Net Salary, NET, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, null, null, 2, 2020-09-26 00:54:06.031938, 2, 2020-09-26 00:54:06.031938).
+2020-09-26 08:54:06 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'NET', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'Net Salary', '1.0', 5) RETURNING id
+2020-09-26 08:54:22 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 08:54:22 CST DETAIL:  Failing row contains (37, Basic Salary, BASIC, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, null, null, 2, 2020-09-26 00:54:22.486495, 2, 2020-09-26 00:54:22.486495).
+2020-09-26 08:54:22 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "register_id", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'BASIC', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'Basic Salary', '1.0', NULL, 5) RETURNING id
+2020-09-26 08:54:22 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 08:54:22 CST DETAIL:  Failing row contains (38, Basic Salary, BASIC, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, null, null, 2, 2020-09-26 00:54:22.486495, 2, 2020-09-26 00:54:22.486495).
+2020-09-26 08:54:22 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "register_id", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'BASIC', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'Basic Salary', '1.0', NULL, 5) RETURNING id
+2020-09-26 08:54:22 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 08:54:22 CST DETAIL:  Failing row contains (39, Labor Insurance employee 2020, LI-20, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, null, null, 2, 2020-09-26 00:54:22.486495, 2, 2020-09-26 00:54:22.486495).
+2020-09-26 08:54:22 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'LI-20', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'Labor Insurance employee 2020', '1.0', 5) RETURNING id
+2020-09-26 08:54:22 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 08:54:22 CST DETAIL:  Failing row contains (40, IRS, IRS, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, null, null, 2, 2020-09-26 00:54:22.486495, 2, 2020-09-26 00:54:22.486495).
+2020-09-26 08:54:22 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'IRS', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'IRS', '1.0', 5) RETURNING id
+2020-09-26 08:54:22 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 08:54:22 CST DETAIL:  Failing row contains (41, Health Fee employee 2020, HFE-20, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, null, null, 2, 2020-09-26 00:54:22.486495, 2, 2020-09-26 00:54:22.486495).
+2020-09-26 08:54:22 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'HFE-20', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'Health Fee employee 2020', '1.0', 5) RETURNING id
+2020-09-26 08:54:22 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 08:54:22 CST DETAIL:  Failing row contains (42, Labor Insurance Company 2020, LIC-20, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, null, null, 2, 2020-09-26 00:54:22.486495, 2, 2020-09-26 00:54:22.486495).
+2020-09-26 08:54:22 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'LIC-20', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'Labor Insurance Company 2020', '1.0', 5) RETURNING id
+2020-09-26 08:54:22 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 08:54:22 CST DETAIL:  Failing row contains (43, Health Fee Company 2020, HFC-20, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, null, null, 2, 2020-09-26 00:54:22.486495, 2, 2020-09-26 00:54:22.486495).
+2020-09-26 08:54:22 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'HFC-20', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'Health Fee Company 2020', '1.0', 5) RETURNING id
+2020-09-26 08:54:22 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 08:54:22 CST DETAIL:  Failing row contains (44, Adjustment, ADJ, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, null, null, 2, 2020-09-26 00:54:22.486495, 2, 2020-09-26 00:54:22.486495).
+2020-09-26 08:54:22 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "register_id", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'ADJ', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'Adjustment', '1.0', NULL, 5) RETURNING id
+2020-09-26 08:54:22 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 08:54:22 CST DETAIL:  Failing row contains (45, Bonus, BN, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, null, null, 2, 2020-09-26 00:54:22.486495, 2, 2020-09-26 00:54:22.486495).
+2020-09-26 08:54:22 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "register_id", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'BN', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'Bonus', '1.0', NULL, 5) RETURNING id
+2020-09-26 08:54:22 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 08:54:22 CST DETAIL:  Failing row contains (46, Pension 2020, PensionC-20, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, null, null, 2, 2020-09-26 00:54:22.486495, 2, 2020-09-26 00:54:22.486495).
+2020-09-26 08:54:22 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'PensionC-20', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'Pension 2020', '1.0', 5) RETURNING id
+2020-09-26 08:54:22 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 08:54:22 CST DETAIL:  Failing row contains (47, Net Salary, NET, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, null, null, 2, 2020-09-26 00:54:22.486495, 2, 2020-09-26 00:54:22.486495).
+2020-09-26 08:54:22 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'NET', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'Net Salary', '1.0', 5) RETURNING id
+2020-09-26 11:38:48 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 11:38:48 CST DETAIL:  Failing row contains (48, Basic Salary, BASIC, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, null, null, 2, 2020-09-26 03:38:48.728771, 2, 2020-09-26 03:38:48.728771).
+2020-09-26 11:38:48 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "register_id", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'BASIC', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'Basic Salary', '1.0', NULL, 5) RETURNING id
+2020-09-26 11:38:48 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 11:38:48 CST DETAIL:  Failing row contains (49, Basic Salary, BASIC, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, null, null, 2, 2020-09-26 03:38:48.728771, 2, 2020-09-26 03:38:48.728771).
+2020-09-26 11:38:48 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "register_id", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'BASIC', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'Basic Salary', '1.0', NULL, 5) RETURNING id
+2020-09-26 11:38:48 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 11:38:48 CST DETAIL:  Failing row contains (50, Labor Insurance employee 2020, LI-20, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, 8, null, 2, 2020-09-26 03:38:48.728771, 2, 2020-09-26 03:38:48.728771).
+2020-09-26 11:38:48 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "register_id", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'LI-20', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'Labor Insurance employee 2020', '1.0', 8, 5) RETURNING id
+2020-09-26 11:38:48 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 11:38:48 CST DETAIL:  Failing row contains (51, IRS, IRS, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, 11, null, 2, 2020-09-26 03:38:48.728771, 2, 2020-09-26 03:38:48.728771).
+2020-09-26 11:38:48 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "register_id", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'IRS', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'IRS', '1.0', 11, 5) RETURNING id
+2020-09-26 11:38:48 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 11:38:48 CST DETAIL:  Failing row contains (52, Health Fee employee 2020, HFE-20, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, 10, null, 2, 2020-09-26 03:38:48.728771, 2, 2020-09-26 03:38:48.728771).
+2020-09-26 11:38:48 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "register_id", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'HFE-20', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'Health Fee employee 2020', '1.0', 10, 5) RETURNING id
+2020-09-26 11:38:48 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 11:38:48 CST DETAIL:  Failing row contains (53, Labor Insurance Company 2020, LIC-20, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, 8, null, 2, 2020-09-26 03:38:48.728771, 2, 2020-09-26 03:38:48.728771).
+2020-09-26 11:38:48 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "register_id", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'LIC-20', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'Labor Insurance Company 2020', '1.0', 8, 5) RETURNING id
+2020-09-26 11:38:48 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 11:38:48 CST DETAIL:  Failing row contains (54, Health Fee Company 2020, HFC-20, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, 10, null, 2, 2020-09-26 03:38:48.728771, 2, 2020-09-26 03:38:48.728771).
+2020-09-26 11:38:48 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "register_id", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'HFC-20', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'Health Fee Company 2020', '1.0', 10, 5) RETURNING id
+2020-09-26 11:38:48 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 11:38:48 CST DETAIL:  Failing row contains (55, Adjustment, ADJ, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, null, null, 2, 2020-09-26 03:38:48.728771, 2, 2020-09-26 03:38:48.728771).
+2020-09-26 11:38:48 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "register_id", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'ADJ', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'Adjustment', '1.0', NULL, 5) RETURNING id
+2020-09-26 11:38:48 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 11:38:48 CST DETAIL:  Failing row contains (56, Bonus, BN, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, null, null, 2, 2020-09-26 03:38:48.728771, 2, 2020-09-26 03:38:48.728771).
+2020-09-26 11:38:48 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "register_id", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'BN', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'Bonus', '1.0', NULL, 5) RETURNING id
+2020-09-26 11:38:48 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 11:38:48 CST DETAIL:  Failing row contains (57, Pension 2020, PensionC-20, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, 9, null, 2, 2020-09-26 03:38:48.728771, 2, 2020-09-26 03:38:48.728771).
+2020-09-26 11:38:48 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "register_id", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'PensionC-20', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'Pension 2020', '1.0', 9, 5) RETURNING id
+2020-09-26 11:38:48 CST ERROR:  null value in column "category_id" violates not-null constraint
+2020-09-26 11:38:48 CST DETAIL:  Failing row contains (58, Net Salary, NET, 5, 1.0, null, t, t, null, 1, none, contract.wage, 
+	                    # Available variables:
+	                    ..., null, null, fix, null, null, 
+	                    # Available variables:
+	                    ..., null, 7, null, 2, 2020-09-26 03:38:48.728771, 2, 2020-09-26 03:38:48.728771).
+2020-09-26 11:38:48 CST STATEMENT:  INSERT INTO "hr_salary_rule" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "amount_python_compute", "amount_select", "appears_on_payslip", "code", "company_id", "condition_python", "condition_range", "condition_select", "name", "quantity", "register_id", "sequence") VALUES (nextval('hr_salary_rule_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days.
+	                    # inputs: object containing the computed inputs.
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = contract.wage * 0.10', 'fix', true, 'NET', 1, '
+	                    # Available variables:
+	                    #----------------------
+	                    # payslip: object containing the payslips
+	                    # employee: hr.employee object
+	                    # contract: hr.contract object
+	                    # rules: object containing the rules code (previously computed)
+	                    # categories: object containing the computed salary rule categories (sum of amount of all rules belonging to that category).
+	                    # worked_days: object containing the computed worked days
+	                    # inputs: object containing the computed inputs
+	
+	                    # Note: returned value have to be set in the variable ''result''
+	
+	                    result = rules.NET > categories.NET * 0.10', 'contract.wage', 'none', 'Net Salary', '1.0', 7, 5) RETURNING id
+2020-09-26 11:43:48 CST ERROR:  null value in column "code" violates not-null constraint
+2020-09-26 11:43:48 CST DETAIL:  Failing row contains (7, LIC-20, null, null, null, 1, 2, 2020-09-26 03:43:48.437758, 2, 2020-09-26 03:43:48.437758).
+2020-09-26 11:43:48 CST STATEMENT:  INSERT INTO "hr_salary_rule_category" ("id", "create_uid", "create_date", "write_uid", "write_date", "company_id", "name") VALUES (nextval('hr_salary_rule_category_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), 1, 'LIC-20') RETURNING id
+2020-09-26 11:51:02 CST ERROR:  null value in column "employee_id" violates not-null constraint
+2020-09-26 11:51:02 CST DETAIL:  Failing row contains (1, null, Employees, null, null, 2020-09-01, 2020-09-30, draft, 1, null, null, null, null, null, 2, 2020-09-26 03:51:02.536842, 2, 2020-09-26 03:51:02.536842).
+2020-09-26 11:51:02 CST STATEMENT:  INSERT INTO "hr_payslip" ("id", "create_uid", "create_date", "write_uid", "write_date", "company_id", "date_from", "date_to", "name", "state") VALUES (nextval('hr_payslip_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), 1, '2020-09-01', '2020-09-30', 'Employees', 'draft') RETURNING id
+2020-09-26 11:51:02 CST ERROR:  null value in column "employee_id" violates not-null constraint
+2020-09-26 11:51:02 CST DETAIL:  Failing row contains (2, null, Employees, null, null, 2020-09-01, 2020-09-30, draft, 1, null, null, null, null, null, 2, 2020-09-26 03:51:02.536842, 2, 2020-09-26 03:51:02.536842).
+2020-09-26 11:51:02 CST STATEMENT:  INSERT INTO "hr_payslip" ("id", "create_uid", "create_date", "write_uid", "write_date", "company_id", "date_from", "date_to", "name", "state") VALUES (nextval('hr_payslip_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), 1, '2020-09-01', '2020-09-30', 'Employees', 'draft') RETURNING id
+2020-09-26 11:51:02 CST ERROR:  null value in column "employee_id" violates not-null constraint
+2020-09-26 11:51:02 CST DETAIL:  Failing row contains (3, null, Labor Insurance, null, null, 2020-09-01, 2020-09-30, draft, 1, null, null, null, null, null, 2, 2020-09-26 03:51:02.536842, 2, 2020-09-26 03:51:02.536842).
+2020-09-26 11:51:02 CST STATEMENT:  INSERT INTO "hr_payslip" ("id", "create_uid", "create_date", "write_uid", "write_date", "company_id", "date_from", "date_to", "name", "state") VALUES (nextval('hr_payslip_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), 1, '2020-09-01', '2020-09-30', 'Labor Insurance', 'draft') RETURNING id
+2020-09-26 11:51:02 CST ERROR:  null value in column "employee_id" violates not-null constraint
+2020-09-26 11:51:02 CST DETAIL:  Failing row contains (4, null, Labor Pension, null, null, 2020-09-01, 2020-09-30, draft, 1, null, null, null, null, null, 2, 2020-09-26 03:51:02.536842, 2, 2020-09-26 03:51:02.536842).
+2020-09-26 11:51:02 CST STATEMENT:  INSERT INTO "hr_payslip" ("id", "create_uid", "create_date", "write_uid", "write_date", "company_id", "date_from", "date_to", "name", "state") VALUES (nextval('hr_payslip_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), 1, '2020-09-01', '2020-09-30', 'Labor Pension', 'draft') RETURNING id
+2020-09-26 11:51:02 CST ERROR:  null value in column "employee_id" violates not-null constraint
+2020-09-26 11:51:02 CST DETAIL:  Failing row contains (5, null, Health Insurance, null, null, 2020-09-01, 2020-09-30, draft, 1, null, null, null, null, null, 2, 2020-09-26 03:51:02.536842, 2, 2020-09-26 03:51:02.536842).
+2020-09-26 11:51:02 CST STATEMENT:  INSERT INTO "hr_payslip" ("id", "create_uid", "create_date", "write_uid", "write_date", "company_id", "date_from", "date_to", "name", "state") VALUES (nextval('hr_payslip_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), 1, '2020-09-01', '2020-09-30', 'Health Insurance', 'draft') RETURNING id
+2020-09-26 11:51:02 CST ERROR:  null value in column "employee_id" violates not-null constraint
+2020-09-26 11:51:02 CST DETAIL:  Failing row contains (6, null, IRS, null, null, 2020-09-01, 2020-09-30, draft, 1, null, null, null, null, null, 2, 2020-09-26 03:51:02.536842, 2, 2020-09-26 03:51:02.536842).
+2020-09-26 11:51:02 CST STATEMENT:  INSERT INTO "hr_payslip" ("id", "create_uid", "create_date", "write_uid", "write_date", "company_id", "date_from", "date_to", "name", "state") VALUES (nextval('hr_payslip_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), 1, '2020-09-01', '2020-09-30', 'IRS', 'draft') RETURNING id
+2020-09-26 11:51:21 CST ERROR:  null value in column "employee_id" violates not-null constraint
+2020-09-26 11:51:21 CST DETAIL:  Failing row contains (7, null, Employees, null, null, 2020-09-01, 2020-09-30, draft, 1, null, null, null, null, null, 2, 2020-09-26 03:51:21.104111, 2, 2020-09-26 03:51:21.104111).
+2020-09-26 11:51:21 CST STATEMENT:  INSERT INTO "hr_payslip" ("id", "create_uid", "create_date", "write_uid", "write_date", "company_id", "date_from", "date_to", "name", "state") VALUES (nextval('hr_payslip_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), 1, '2020-09-01', '2020-09-30', 'Employees', 'draft') RETURNING id
+2020-09-26 11:51:21 CST ERROR:  null value in column "employee_id" violates not-null constraint
+2020-09-26 11:51:21 CST DETAIL:  Failing row contains (8, null, Employees, null, null, 2020-09-01, 2020-09-30, draft, 1, null, null, null, null, null, 2, 2020-09-26 03:51:21.104111, 2, 2020-09-26 03:51:21.104111).
+2020-09-26 11:51:21 CST STATEMENT:  INSERT INTO "hr_payslip" ("id", "create_uid", "create_date", "write_uid", "write_date", "company_id", "date_from", "date_to", "name", "state") VALUES (nextval('hr_payslip_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), 1, '2020-09-01', '2020-09-30', 'Employees', 'draft') RETURNING id
+2020-09-26 11:51:21 CST ERROR:  null value in column "employee_id" violates not-null constraint
+2020-09-26 11:51:21 CST DETAIL:  Failing row contains (9, null, Labor Insurance, null, null, 2020-09-01, 2020-09-30, draft, 1, null, null, null, null, null, 2, 2020-09-26 03:51:21.104111, 2, 2020-09-26 03:51:21.104111).
+2020-09-26 11:51:21 CST STATEMENT:  INSERT INTO "hr_payslip" ("id", "create_uid", "create_date", "write_uid", "write_date", "company_id", "date_from", "date_to", "name", "state") VALUES (nextval('hr_payslip_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), 1, '2020-09-01', '2020-09-30', 'Labor Insurance', 'draft') RETURNING id
+2020-09-26 11:51:21 CST ERROR:  null value in column "employee_id" violates not-null constraint
+2020-09-26 11:51:21 CST DETAIL:  Failing row contains (10, null, Labor Pension, null, null, 2020-09-01, 2020-09-30, draft, 1, null, null, null, null, null, 2, 2020-09-26 03:51:21.104111, 2, 2020-09-26 03:51:21.104111).
+2020-09-26 11:51:21 CST STATEMENT:  INSERT INTO "hr_payslip" ("id", "create_uid", "create_date", "write_uid", "write_date", "company_id", "date_from", "date_to", "name", "state") VALUES (nextval('hr_payslip_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), 1, '2020-09-01', '2020-09-30', 'Labor Pension', 'draft') RETURNING id
+2020-09-26 11:51:21 CST ERROR:  null value in column "employee_id" violates not-null constraint
+2020-09-26 11:51:21 CST DETAIL:  Failing row contains (11, null, Health Insurance, null, null, 2020-09-01, 2020-09-30, draft, 1, null, null, null, null, null, 2, 2020-09-26 03:51:21.104111, 2, 2020-09-26 03:51:21.104111).
+2020-09-26 11:51:21 CST STATEMENT:  INSERT INTO "hr_payslip" ("id", "create_uid", "create_date", "write_uid", "write_date", "company_id", "date_from", "date_to", "name", "state") VALUES (nextval('hr_payslip_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), 1, '2020-09-01', '2020-09-30', 'Health Insurance', 'draft') RETURNING id
+2020-09-26 11:51:21 CST ERROR:  null value in column "employee_id" violates not-null constraint
+2020-09-26 11:51:21 CST DETAIL:  Failing row contains (12, null, IRS, null, null, 2020-09-01, 2020-09-30, draft, 1, null, null, null, null, null, 2, 2020-09-26 03:51:21.104111, 2, 2020-09-26 03:51:21.104111).
+2020-09-26 11:51:21 CST STATEMENT:  INSERT INTO "hr_payslip" ("id", "create_uid", "create_date", "write_uid", "write_date", "company_id", "date_from", "date_to", "name", "state") VALUES (nextval('hr_payslip_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), 1, '2020-09-01', '2020-09-30', 'IRS', 'draft') RETURNING id
+2020-09-26 11:51:53 CST ERROR:  null value in column "code" violates not-null constraint
+2020-09-26 11:51:53 CST DETAIL:  Failing row contains (6, Employees, null, 1, null, null, 2, 2020-09-26 03:51:53.056476, 2, 2020-09-26 03:51:53.056476).
+2020-09-26 11:51:53 CST STATEMENT:  INSERT INTO "hr_payroll_structure" ("id", "create_uid", "create_date", "write_uid", "write_date", "company_id", "name", "parent_id") VALUES (nextval('hr_payroll_structure_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), 1, 'Employees', NULL) RETURNING id
+2020-09-26 11:51:53 CST ERROR:  null value in column "code" violates not-null constraint
+2020-09-26 11:51:53 CST DETAIL:  Failing row contains (7, Employees, null, 1, null, null, 2, 2020-09-26 03:51:53.056476, 2, 2020-09-26 03:51:53.056476).
+2020-09-26 11:51:53 CST STATEMENT:  INSERT INTO "hr_payroll_structure" ("id", "create_uid", "create_date", "write_uid", "write_date", "company_id", "name", "parent_id") VALUES (nextval('hr_payroll_structure_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), 1, 'Employees', NULL) RETURNING id
+2020-09-26 11:51:53 CST ERROR:  null value in column "code" violates not-null constraint
+2020-09-26 11:51:53 CST DETAIL:  Failing row contains (8, Labor Insurance, null, 1, null, null, 2, 2020-09-26 03:51:53.056476, 2, 2020-09-26 03:51:53.056476).
+2020-09-26 11:51:53 CST STATEMENT:  INSERT INTO "hr_payroll_structure" ("id", "create_uid", "create_date", "write_uid", "write_date", "company_id", "name", "parent_id") VALUES (nextval('hr_payroll_structure_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), 1, 'Labor Insurance', NULL) RETURNING id
+2020-09-26 11:51:53 CST ERROR:  null value in column "code" violates not-null constraint
+2020-09-26 11:51:53 CST DETAIL:  Failing row contains (9, Labor Pension, null, 1, null, null, 2, 2020-09-26 03:51:53.056476, 2, 2020-09-26 03:51:53.056476).
+2020-09-26 11:51:53 CST STATEMENT:  INSERT INTO "hr_payroll_structure" ("id", "create_uid", "create_date", "write_uid", "write_date", "company_id", "name", "parent_id") VALUES (nextval('hr_payroll_structure_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), 1, 'Labor Pension', NULL) RETURNING id
+2020-09-26 11:51:53 CST ERROR:  null value in column "code" violates not-null constraint
+2020-09-26 11:51:53 CST DETAIL:  Failing row contains (10, Health Insurance, null, 1, null, null, 2, 2020-09-26 03:51:53.056476, 2, 2020-09-26 03:51:53.056476).
+2020-09-26 11:51:53 CST STATEMENT:  INSERT INTO "hr_payroll_structure" ("id", "create_uid", "create_date", "write_uid", "write_date", "company_id", "name", "parent_id") VALUES (nextval('hr_payroll_structure_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), 1, 'Health Insurance', NULL) RETURNING id
+2020-09-26 11:51:53 CST ERROR:  null value in column "code" violates not-null constraint
+2020-09-26 11:51:53 CST DETAIL:  Failing row contains (11, IRS, null, 1, null, null, 2, 2020-09-26 03:51:53.056476, 2, 2020-09-26 03:51:53.056476).
+2020-09-26 11:51:53 CST STATEMENT:  INSERT INTO "hr_payroll_structure" ("id", "create_uid", "create_date", "write_uid", "write_date", "company_id", "name", "parent_id") VALUES (nextval('hr_payroll_structure_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), 1, 'IRS', NULL) RETURNING id

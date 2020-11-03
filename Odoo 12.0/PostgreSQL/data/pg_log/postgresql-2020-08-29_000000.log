@@ -1,0 +1,10 @@
+2020-08-29 10:59:02 CST ERROR:  could not serialize access due to concurrent update
+2020-08-29 10:59:02 CST STATEMENT:  DELETE FROM ir_attachment WHERE id IN (2639, 1254)
+2020-08-29 11:06:13 CST ERROR:  null value in column "config_id" violates not-null constraint
+2020-08-29 11:06:13 CST DETAIL:  Failing row contains (1, null, POS/2020/08/29/01, 2, 2020-08-29 03:04:02, 2020-08-29 03:05:31, closing_control, 1, 1, 7, 189, f, 1, 2020-08-29 03:03:41.513082, 2, 2020-08-29 03:05:31.555008).
+2020-08-29 11:06:13 CST CONTEXT:  SQL statement "UPDATE ONLY "public"."pos_session" SET "config_id" = NULL WHERE $1 OPERATOR(pg_catalog.=) "config_id""
+2020-08-29 11:06:13 CST STATEMENT:  DELETE FROM pos_config WHERE id IN (1)
+2020-08-29 11:06:20 CST ERROR:  null value in column "config_id" violates not-null constraint
+2020-08-29 11:06:20 CST DETAIL:  Failing row contains (1, null, POS/2020/08/29/01, 2, 2020-08-29 03:04:02, 2020-08-29 03:05:31, closing_control, 1, 1, 7, 189, f, 1, 2020-08-29 03:03:41.513082, 2, 2020-08-29 03:05:31.555008).
+2020-08-29 11:06:20 CST CONTEXT:  SQL statement "UPDATE ONLY "public"."pos_session" SET "config_id" = NULL WHERE $1 OPERATOR(pg_catalog.=) "config_id""
+2020-08-29 11:06:20 CST STATEMENT:  DELETE FROM pos_config WHERE id IN (1)

@@ -1,0 +1,33 @@
+2020-09-02 21:48:52 CST ERROR:  duplicate key value violates unique constraint "res_partner_bank_unique_number"
+2020-09-02 21:48:52 CST DETAIL:  Key (sanitized_acc_number, company_id)=(00753125980, 1) already exists.
+2020-09-02 21:48:52 CST STATEMENT:  UPDATE "res_partner_bank" SET "sanitized_acc_number"='00753125980',"write_uid"=2,"write_date"=(now() at time zone 'UTC') WHERE id IN (3)
+2020-09-02 21:48:58 CST ERROR:  duplicate key value violates unique constraint "res_partner_bank_unique_number"
+2020-09-02 21:48:58 CST DETAIL:  Key (sanitized_acc_number, company_id)=(00753125980, 1) already exists.
+2020-09-02 21:48:58 CST STATEMENT:  UPDATE "res_partner_bank" SET "sanitized_acc_number"='00753125980',"write_uid"=2,"write_date"=(now() at time zone 'UTC') WHERE id IN (4)
+2020-09-02 21:51:47 CST ERROR:  duplicate key value violates unique constraint "res_currency_rate_unique_name_per_day"
+2020-09-02 21:51:47 CST DETAIL:  Key (name, currency_id, company_id)=(2020-09-02, 1, 1) already exists.
+2020-09-02 21:51:47 CST STATEMENT:  INSERT INTO "res_currency_rate" ("id", "create_uid", "create_date", "write_uid", "write_date", "company_id", "currency_id", "name", "rate") VALUES (nextval('res_currency_rate_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), 1, 1, '2020-09-02', 1.0) RETURNING id
+2020-09-02 21:51:57 CST ERROR:  duplicate key value violates unique constraint "res_currency_rate_unique_name_per_day"
+2020-09-02 21:51:57 CST DETAIL:  Key (name, currency_id, company_id)=(2020-09-02, 1, 1) already exists.
+2020-09-02 21:51:57 CST STATEMENT:  INSERT INTO "res_currency_rate" ("id", "create_uid", "create_date", "write_uid", "write_date", "company_id", "currency_id", "name", "rate") VALUES (nextval('res_currency_rate_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), 1, 1, '2020-09-02', 1.0) RETURNING id
+2020-09-02 23:01:05 CST ERROR:  update or delete on table "account_account" violates foreign key constraint "account_journal_default_credit_account_id_fkey" on table "account_journal"
+2020-09-02 23:01:05 CST DETAIL:  Key (id)=(39) is still referenced from table "account_journal".
+2020-09-02 23:01:05 CST STATEMENT:  DELETE FROM account_account WHERE id IN (39)
+2020-09-02 23:08:33 CST ERROR:  update or delete on table "account_account" violates foreign key constraint "account_journal_default_credit_account_id_fkey" on table "account_journal"
+2020-09-02 23:08:33 CST DETAIL:  Key (id)=(39) is still referenced from table "account_journal".
+2020-09-02 23:08:33 CST STATEMENT:  DELETE FROM account_account WHERE id IN (39)
+2020-09-02 23:38:30 CST ERROR:  null value in column "account_asset_id" violates not-null constraint
+2020-09-02 23:38:30 CST DETAIL:  Failing row contains (1, t, b, null, null, null, null, null, 1, linear, 5, 1, 0.3, number, null, null, null, null, purchase, manual, 2, 2020-09-02 15:38:30.069545, 2, 2020-09-02 15:38:30.069545).
+2020-09-02 23:38:30 CST STATEMENT:  INSERT INTO "account_asset_category" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "company_id", "date_first_depreciation", "method", "method_number", "method_period", "method_progress_factor", "method_time", "name", "type") VALUES (nextval('account_asset_category_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, 1, 'manual', 'linear', 5, 1, 0.3, 'number', 'b', 'purchase') RETURNING id
+2020-09-02 23:46:27 CST ERROR:  null value in column "account_asset_id" violates not-null constraint
+2020-09-02 23:46:27 CST DETAIL:  Failing row contains (2, t, b, null, null, null, null, null, 1, linear, 5, 1, 0.3, number, null, null, null, null, purchase, manual, 2, 2020-09-02 15:46:27.90667, 2, 2020-09-02 15:46:27.90667).
+2020-09-02 23:46:27 CST STATEMENT:  INSERT INTO "account_asset_category" ("id", "create_uid", "create_date", "write_uid", "write_date", "active", "company_id", "date_first_depreciation", "method", "method_number", "method_period", "method_progress_factor", "method_time", "name", "type") VALUES (nextval('account_asset_category_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), true, 1, 'manual', 'linear', 5, 1, 0.3, 'number', 'b', 'purchase') RETURNING id
+2020-09-02 23:54:24 CST ERROR:  duplicate key value violates unique constraint "res_currency_rate_unique_name_per_day"
+2020-09-02 23:54:24 CST DETAIL:  Key (name, currency_id, company_id)=(2020-09-02, 1, 1) already exists.
+2020-09-02 23:54:24 CST STATEMENT:  INSERT INTO "res_currency_rate" ("id", "create_uid", "create_date", "write_uid", "write_date", "company_id", "currency_id", "name", "rate") VALUES (nextval('res_currency_rate_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), 1, 1, '2020-09-02', 1.0) RETURNING id
+2020-09-02 23:54:33 CST ERROR:  duplicate key value violates unique constraint "res_currency_rate_unique_name_per_day"
+2020-09-02 23:54:33 CST DETAIL:  Key (name, currency_id, company_id)=(2020-09-02, 1, 1) already exists.
+2020-09-02 23:54:33 CST STATEMENT:  INSERT INTO "res_currency_rate" ("id", "create_uid", "create_date", "write_uid", "write_date", "company_id", "currency_id", "name", "rate") VALUES (nextval('res_currency_rate_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), 1, 1, '2020-09-02', 1.0) RETURNING id
+2020-09-02 23:54:40 CST ERROR:  duplicate key value violates unique constraint "res_currency_rate_unique_name_per_day"
+2020-09-02 23:54:40 CST DETAIL:  Key (name, currency_id, company_id)=(2020-09-02, 1, 1) already exists.
+2020-09-02 23:54:40 CST STATEMENT:  INSERT INTO "res_currency_rate" ("id", "create_uid", "create_date", "write_uid", "write_date", "company_id", "currency_id", "name", "rate") VALUES (nextval('res_currency_rate_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), 1, 1, '2020-09-02', 0.02878526) RETURNING id

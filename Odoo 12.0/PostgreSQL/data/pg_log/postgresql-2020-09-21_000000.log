@@ -1,0 +1,14 @@
+2020-09-21 21:19:50 CST ERROR:  could not serialize access due to concurrent update
+2020-09-21 21:19:50 CST STATEMENT:  UPDATE "bus_presence" SET "last_poll"='2020-09-21 13:19:50',"last_presence"='2020-09-21 13:18:43.767547' WHERE id IN (2)
+2020-09-21 21:20:54 CST ERROR:  could not serialize access due to concurrent update
+2020-09-21 21:20:54 CST STATEMENT:  UPDATE "bus_presence" SET "last_poll"='2020-09-21 13:20:54' WHERE id IN (2)
+2020-09-21 21:21:47 CST ERROR:  could not serialize access due to concurrent update
+2020-09-21 21:21:47 CST STATEMENT:  UPDATE "bus_presence" SET "last_poll"='2020-09-21 13:21:47' WHERE id IN (2)
+2020-09-21 21:22:49 CST ERROR:  could not serialize access due to concurrent update
+2020-09-21 21:22:49 CST STATEMENT:  UPDATE "bus_presence" SET "last_poll"='2020-09-21 13:22:49' WHERE id IN (2)
+2020-09-21 21:23:52 CST ERROR:  could not serialize access due to concurrent update
+2020-09-21 21:23:52 CST STATEMENT:  UPDATE "bus_presence" SET "last_poll"='2020-09-21 13:23:52' WHERE id IN (2)
+2020-09-21 21:28:13 CST ERROR:  could not serialize access due to concurrent update
+2020-09-21 21:28:13 CST STATEMENT:  UPDATE "bus_presence" SET "last_poll"='2020-09-21 13:28:13' WHERE id IN (2)
+2020-09-21 21:30:05 CST ERROR:  could not serialize access due to concurrent update
+2020-09-21 21:30:05 CST STATEMENT:  UPDATE "bus_presence" SET "last_poll"='2020-09-21 13:30:05' WHERE id IN (2)

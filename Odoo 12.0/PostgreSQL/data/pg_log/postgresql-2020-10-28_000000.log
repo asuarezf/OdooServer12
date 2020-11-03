@@ -1,0 +1,26 @@
+2020-10-28 05:49:36 CST ERROR:  could not obtain lock on row in relation "ir_cron"
+2020-10-28 05:49:36 CST STATEMENT:  SELECT *
+	                                       FROM ir_cron
+	                                       WHERE numbercall != 0
+	                                          AND active
+	                                          AND nextcall <= (now() at time zone 'UTC')
+	                                          AND id=14
+	                                       FOR UPDATE NOWAIT
+2020-10-28 14:53:45 CST ERROR:  could not serialize access due to concurrent update
+2020-10-28 14:53:45 CST STATEMENT:  UPDATE "bus_presence" SET "last_poll"='2020-10-28 06:53:45' WHERE id IN (2)
+2020-10-28 18:10:12 CST ERROR:  could not obtain lock on row in relation "ir_cron"
+2020-10-28 18:10:12 CST STATEMENT:  SELECT *
+	                                       FROM ir_cron
+	                                       WHERE numbercall != 0
+	                                          AND active
+	                                          AND nextcall <= (now() at time zone 'UTC')
+	                                          AND id=10
+	                                       FOR UPDATE NOWAIT
+2020-10-28 23:59:46 CST ERROR:  could not obtain lock on row in relation "ir_cron"
+2020-10-28 23:59:46 CST STATEMENT:  SELECT *
+	                                       FROM ir_cron
+	                                       WHERE numbercall != 0
+	                                          AND active
+	                                          AND nextcall <= (now() at time zone 'UTC')
+	                                          AND id=14
+	                                       FOR UPDATE NOWAIT

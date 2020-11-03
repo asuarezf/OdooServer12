@@ -1,0 +1,16 @@
+2020-10-05 03:26:44 CST LOG:  using stale statistics instead of current ones because stats collector is not responding
+2020-10-05 17:35:52 CST ERROR:  update or delete on table "product_product" violates foreign key constraint "sale_order_line_product_id_fkey" on table "sale_order_line"
+2020-10-05 17:35:52 CST DETAIL:  Key (id)=(1) is still referenced from table "sale_order_line".
+2020-10-05 17:35:52 CST STATEMENT:  DELETE FROM product_template WHERE id IN (1)
+2020-10-05 17:36:09 CST ERROR:  update or delete on table "product_product" violates foreign key constraint "sale_order_line_product_id_fkey" on table "sale_order_line"
+2020-10-05 17:36:09 CST DETAIL:  Key (id)=(1) is still referenced from table "sale_order_line".
+2020-10-05 17:36:09 CST STATEMENT:  DELETE FROM product_template WHERE id IN (1)
+2020-10-05 17:58:23 CST ERROR:  update or delete on table "product_product" violates foreign key constraint "sale_order_line_product_id_fkey" on table "sale_order_line"
+2020-10-05 17:58:23 CST DETAIL:  Key (id)=(1) is still referenced from table "sale_order_line".
+2020-10-05 17:58:23 CST STATEMENT:  DELETE FROM product_template WHERE id IN (1)
+2020-10-05 17:59:03 CST ERROR:  update or delete on table "product_product" violates foreign key constraint "sale_order_line_product_id_fkey" on table "sale_order_line"
+2020-10-05 17:59:03 CST DETAIL:  Key (id)=(1) is still referenced from table "sale_order_line".
+2020-10-05 17:59:03 CST STATEMENT:  DELETE FROM product_template WHERE id IN (1)
+2020-10-05 18:01:53 CST ERROR:  update or delete on table "product_product" violates foreign key constraint "sale_order_line_product_id_fkey" on table "sale_order_line"
+2020-10-05 18:01:53 CST DETAIL:  Key (id)=(1) is still referenced from table "sale_order_line".
+2020-10-05 18:01:53 CST STATEMENT:  DELETE FROM product_template WHERE id IN (1)

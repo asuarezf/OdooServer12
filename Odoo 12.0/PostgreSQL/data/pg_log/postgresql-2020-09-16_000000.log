@@ -1,0 +1,2 @@
+2020-09-16 14:18:41 CST ERROR:  could not serialize access due to concurrent update
+2020-09-16 14:18:41 CST STATEMENT:  DELETE FROM ir_attachment WHERE id IN (253)

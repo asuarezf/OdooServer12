@@ -1,0 +1,7 @@
+2020-10-14 17:39:35 CST FATAL:  the database system is starting up
+2020-10-14 17:39:35 CST LOG:  database system was shut down at 2020-10-14 17:38:42 CST
+2020-10-14 17:39:36 CST FATAL:  the database system is starting up
+2020-10-14 17:39:37 CST FATAL:  the database system is starting up
+2020-10-14 17:39:37 CST LOG:  MultiXact member wraparound protections are now enabled
+2020-10-14 17:39:37 CST LOG:  database system is ready to accept connections
+2020-10-14 17:39:37 CST LOG:  autovacuum launcher started

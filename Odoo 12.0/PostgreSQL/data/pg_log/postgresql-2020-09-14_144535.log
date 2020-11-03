@@ -1,0 +1,194 @@
+2020-09-14 14:45:35 CST FATAL:  the database system is starting up
+2020-09-14 14:45:35 CST LOG:  database system was shut down at 2020-09-14 14:44:59 CST
+2020-09-14 14:45:36 CST LOG:  MultiXact member wraparound protections are now enabled
+2020-09-14 14:45:36 CST LOG:  database system is ready to accept connections
+2020-09-14 14:45:36 CST LOG:  autovacuum launcher started
+2020-09-14 14:57:41 CST ERROR:  relation "website_rewrite" does not exist at character 34
+2020-09-14 14:57:41 CST STATEMENT:  SELECT "website_rewrite".id FROM "website_rewrite" WHERE ((("website_rewrite"."active" = true)  AND  ("website_rewrite"."redirect_type" in ('308','404')))  AND  ("website_rewrite"."website_id" IS NULL   OR  ("website_rewrite"."website_id" = 1))) ORDER BY "website_rewrite"."id"  
+2020-09-14 14:58:11 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 15:02:11 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 15:03:43 CST ERROR:  could not obtain lock on row in relation "ir_cron"
+2020-09-14 15:03:43 CST STATEMENT:  SELECT *
+	                                       FROM ir_cron
+	                                       WHERE numbercall != 0
+	                                          AND active
+	                                          AND nextcall <= (now() at time zone 'UTC')
+	                                          AND id=1
+	                                       FOR UPDATE NOWAIT
+2020-09-14 15:04:02 CST ERROR:  could not serialize access due to concurrent update
+2020-09-14 15:04:02 CST STATEMENT:  UPDATE "mail_channel_partner" SET "write_uid"=2,"seen_message_id"=6,"write_date"=(now() at time zone 'UTC') WHERE id IN (2)
+2020-09-14 15:08:21 CST ERROR:  could not serialize access due to concurrent update
+2020-09-14 15:08:21 CST STATEMENT:  UPDATE "mail_channel_partner" SET "fold_state"='closed',"is_minimized"=false,"write_uid"=2,"write_date"=(now() at time zone 'UTC') WHERE id IN (3)
+2020-09-14 16:29:11 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 16:29:11 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 16:29:11 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 16:29:11 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 16:29:11 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 16:29:11 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 16:29:11 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 16:33:40 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 16:33:40 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 16:33:40 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 16:33:40 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 16:33:40 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 16:33:40 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 16:36:04 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 16:36:04 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 16:36:04 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 16:36:04 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 16:36:04 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 16:37:05 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 16:37:05 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 16:37:05 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 16:37:05 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 16:37:05 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 16:44:19 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 16:44:19 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 16:44:19 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 16:44:19 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 16:44:19 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 16:44:19 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 16:45:13 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 16:45:13 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 16:45:13 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 16:45:13 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 16:45:13 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 16:45:13 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 16:48:32 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 16:48:32 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 16:52:08 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 16:52:08 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 16:52:08 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 16:52:08 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 16:52:08 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 16:54:46 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 16:54:46 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 16:54:46 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 16:54:46 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 16:58:27 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 16:58:27 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 16:58:27 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 16:58:27 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 16:58:27 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 17:01:50 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 17:01:50 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 17:01:50 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 17:01:50 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 17:05:09 CST FATAL:  database "scot" does not exist
+2020-09-14 17:05:09 CST FATAL:  database "scot" does not exist
+2020-09-14 17:06:10 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 17:06:10 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 17:06:10 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 17:06:10 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 17:06:10 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 17:06:10 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 17:06:13 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 17:06:13 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 17:06:13 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 17:06:13 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 17:06:13 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 17:06:13 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 17:06:13 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 17:06:13 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 17:06:13 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 17:06:22 CST ERROR:  role "test12" cannot be dropped because some objects depend on it
+2020-09-14 17:06:22 CST DETAIL:  owner of database test12
+	534 objects in database test12
+2020-09-14 17:06:22 CST STATEMENT:  DROP ROLE test12;
+2020-09-14 17:07:16 CST ERROR:  database "Scot" is being accessed by other users
+2020-09-14 17:07:16 CST DETAIL:  There are 3 other sessions using the database.
+2020-09-14 17:07:16 CST STATEMENT:  DROP DATABASE "Scot";
+	
+2020-09-14 17:07:25 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 17:07:25 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 17:07:25 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 17:19:16 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 17:19:16 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 17:19:16 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 17:21:40 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 17:21:40 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 17:21:42 CST LOG:  received fast shutdown request
+2020-09-14 17:21:42 CST LOG:  aborting any active transactions
+2020-09-14 17:21:42 CST LOG:  autovacuum launcher shutting down
+2020-09-14 17:21:43 CST LOG:  shutting down
+2020-09-14 17:21:43 CST LOG:  database system is shut down

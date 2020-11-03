@@ -1,0 +1,20 @@
+2020-09-03 18:20:48 CST ERROR:  could not obtain lock on row in relation "ir_cron"
+2020-09-03 18:20:48 CST STATEMENT:  SELECT *
+	                                       FROM ir_cron
+	                                       WHERE numbercall != 0
+	                                          AND active
+	                                          AND nextcall <= (now() at time zone 'UTC')
+	                                          AND id=10
+	                                       FOR UPDATE NOWAIT
+2020-09-03 22:28:28 CST ERROR:  could not obtain lock on row in relation "ir_cron"
+2020-09-03 22:28:28 CST STATEMENT:  SELECT *
+	                                       FROM ir_cron
+	                                       WHERE numbercall != 0
+	                                          AND active
+	                                          AND nextcall <= (now() at time zone 'UTC')
+	                                          AND id=15
+	                                       FOR UPDATE NOWAIT
+2020-09-03 23:20:32 CST ERROR:  null value in column "uom_id" violates not-null constraint
+2020-09-03 23:20:32 CST DETAIL:  Failing row contains (52, null, Sr. Niño, 1, null, null, null, product, f, 7, 1000.00, 0, 0.00, f, t, null, 24, 1, t, null, null, 2, 2020-01-14 06:01:47.641463, 2, 2020-07-27 10:46:33.273673, manual, no-message, null, no, order, 2, 0, none, null, null, null, purchase, no-message, null, f, null, f, equal, no, f, null, null, null).
+2020-09-03 23:20:32 CST CONTEXT:  SQL statement "UPDATE ONLY "public"."product_template" SET "uom_id" = NULL WHERE $1 OPERATOR(pg_catalog.=) "uom_id""
+2020-09-03 23:20:32 CST STATEMENT:  DELETE FROM uom_uom WHERE id IN (24)

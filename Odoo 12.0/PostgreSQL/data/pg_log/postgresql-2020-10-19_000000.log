@@ -1,0 +1,125 @@
+2020-10-19 10:46:43 CST ERROR:  relation "website_rewrite" does not exist at character 34
+2020-10-19 10:46:43 CST STATEMENT:  SELECT "website_rewrite".id FROM "website_rewrite" WHERE ((("website_rewrite"."active" = true) AND ("website_rewrite"."redirect_type" in ('308','404'))) AND ("website_rewrite"."website_id" IS NULL  OR ("website_rewrite"."website_id" = 1))) ORDER BY  "website_rewrite"."id"  
+2020-10-19 10:46:58 CST ERROR:  relation "website_rewrite" does not exist at character 34
+2020-10-19 10:46:58 CST STATEMENT:  SELECT "website_rewrite".id FROM "website_rewrite" WHERE ((("website_rewrite"."active" = true) AND ("website_rewrite"."redirect_type" in ('308','404'))) AND ("website_rewrite"."website_id" IS NULL  OR ("website_rewrite"."website_id" = 1))) ORDER BY  "website_rewrite"."id"  
+2020-10-19 10:46:58 CST ERROR:  relation "website_rewrite" does not exist at character 34
+2020-10-19 10:46:58 CST STATEMENT:  SELECT "website_rewrite".id FROM "website_rewrite" WHERE ((("website_rewrite"."active" = true) AND ("website_rewrite"."redirect_type" in ('308','404'))) AND ("website_rewrite"."website_id" IS NULL  OR ("website_rewrite"."website_id" = 1))) ORDER BY  "website_rewrite"."id"  
+2020-10-19 10:48:25 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-10-19 10:48:56 CST ERROR:  relation "website_rewrite" does not exist at character 34
+2020-10-19 10:48:56 CST STATEMENT:  SELECT "website_rewrite".id FROM "website_rewrite" WHERE ((("website_rewrite"."active" = true) AND ("website_rewrite"."redirect_type" in ('308','404'))) AND ("website_rewrite"."website_id" IS NULL  OR ("website_rewrite"."website_id" = 1))) ORDER BY  "website_rewrite"."id"  
+2020-10-19 10:48:56 CST ERROR:  relation "website_rewrite" does not exist at character 34
+2020-10-19 10:48:56 CST STATEMENT:  SELECT "website_rewrite".id FROM "website_rewrite" WHERE ((("website_rewrite"."active" = true) AND ("website_rewrite"."redirect_type" in ('308','404'))) AND ("website_rewrite"."website_id" IS NULL  OR ("website_rewrite"."website_id" = 1))) ORDER BY  "website_rewrite"."id"  
+2020-10-19 10:49:01 CST ERROR:  relation "website_rewrite" does not exist at character 34
+2020-10-19 10:49:01 CST STATEMENT:  SELECT "website_rewrite".id FROM "website_rewrite" WHERE ((("website_rewrite"."active" = true) AND ("website_rewrite"."redirect_type" in ('308','404'))) AND ("website_rewrite"."website_id" IS NULL  OR ("website_rewrite"."website_id" = 1))) ORDER BY  "website_rewrite"."id"  
+2020-10-19 10:49:02 CST ERROR:  relation "website_rewrite" does not exist at character 34
+2020-10-19 10:49:02 CST STATEMENT:  SELECT "website_rewrite".id FROM "website_rewrite" WHERE ((("website_rewrite"."active" = true) AND ("website_rewrite"."redirect_type" in ('308','404'))) AND ("website_rewrite"."website_id" IS NULL  OR ("website_rewrite"."website_id" = 1))) ORDER BY  "website_rewrite"."id"  
+2020-10-19 10:50:03 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-10-19 11:11:44 CST ERROR:  new row for relation "ir_model_data" violates check constraint "ir_model_data_name_nospaces"
+2020-10-19 11:11:44 CST DETAIL:  Failing row contains (5254, 1, 2020-10-19 03:11:44.440147, 2020-10-19 03:11:44.440147, 1, t, module_l10n_tw_standard_ifrss -13, base, ir.module.module, 398).
+2020-10-19 11:11:44 CST STATEMENT:  INSERT INTO "ir_model_data" ("id", "create_uid", "create_date", "write_uid", "write_date", "model", "module", "name", "noupdate", "res_id") VALUES (nextval('ir_model_data_id_seq'), 1, (now() at time zone 'UTC'), 1, (now() at time zone 'UTC'), 'ir.module.module', 'base', 'module_l10n_tw_standard_ifrss -13', true, 398) RETURNING id
+2020-10-19 11:11:56 CST ERROR:  new row for relation "ir_model_data" violates check constraint "ir_model_data_name_nospaces"
+2020-10-19 11:11:56 CST DETAIL:  Failing row contains (5255, 1, 2020-10-19 03:11:56.601394, 2020-10-19 03:11:56.601394, 1, t, module_l10n_tw_standard_ifrss -13, base, ir.module.module, 399).
+2020-10-19 11:11:56 CST STATEMENT:  INSERT INTO "ir_model_data" ("id", "create_uid", "create_date", "write_uid", "write_date", "model", "module", "name", "noupdate", "res_id") VALUES (nextval('ir_model_data_id_seq'), 1, (now() at time zone 'UTC'), 1, (now() at time zone 'UTC'), 'ir.module.module', 'base', 'module_l10n_tw_standard_ifrss -13', true, 399) RETURNING id
+2020-10-19 11:12:10 CST ERROR:  new row for relation "ir_model_data" violates check constraint "ir_model_data_name_nospaces"
+2020-10-19 11:12:10 CST DETAIL:  Failing row contains (5256, 1, 2020-10-19 03:12:10.163799, 2020-10-19 03:12:10.163799, 1, t, module_l10n_tw_standard_ifrss -13, base, ir.module.module, 400).
+2020-10-19 11:12:10 CST STATEMENT:  INSERT INTO "ir_model_data" ("id", "create_uid", "create_date", "write_uid", "write_date", "model", "module", "name", "noupdate", "res_id") VALUES (nextval('ir_model_data_id_seq'), 1, (now() at time zone 'UTC'), 1, (now() at time zone 'UTC'), 'ir.module.module', 'base', 'module_l10n_tw_standard_ifrss -13', true, 400) RETURNING id
+2020-10-19 11:12:19 CST ERROR:  new row for relation "ir_model_data" violates check constraint "ir_model_data_name_nospaces"
+2020-10-19 11:12:19 CST DETAIL:  Failing row contains (5257, 1, 2020-10-19 03:12:19.48562, 2020-10-19 03:12:19.48562, 1, t, module_l10n_tw_standard_ifrss -13, base, ir.module.module, 401).
+2020-10-19 11:12:19 CST STATEMENT:  INSERT INTO "ir_model_data" ("id", "create_uid", "create_date", "write_uid", "write_date", "model", "module", "name", "noupdate", "res_id") VALUES (nextval('ir_model_data_id_seq'), 1, (now() at time zone 'UTC'), 1, (now() at time zone 'UTC'), 'ir.module.module', 'base', 'module_l10n_tw_standard_ifrss -13', true, 401) RETURNING id
+2020-10-19 11:12:26 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-10-19 11:12:26 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-10-19 11:12:26 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-10-19 11:12:26 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-10-19 11:12:35 CST ERROR:  new row for relation "ir_model_data" violates check constraint "ir_model_data_name_nospaces"
+2020-10-19 11:12:35 CST DETAIL:  Failing row contains (5258, 1, 2020-10-19 03:12:35.173163, 2020-10-19 03:12:35.173163, 1, t, module_l10n_tw_standard_ifrss -13, base, ir.module.module, 402).
+2020-10-19 11:12:35 CST STATEMENT:  INSERT INTO "ir_model_data" ("id", "create_uid", "create_date", "write_uid", "write_date", "model", "module", "name", "noupdate", "res_id") VALUES (nextval('ir_model_data_id_seq'), 1, (now() at time zone 'UTC'), 1, (now() at time zone 'UTC'), 'ir.module.module', 'base', 'module_l10n_tw_standard_ifrss -13', true, 402) RETURNING id
+2020-10-19 11:12:44 CST ERROR:  new row for relation "ir_model_data" violates check constraint "ir_model_data_name_nospaces"
+2020-10-19 11:12:44 CST DETAIL:  Failing row contains (5259, 1, 2020-10-19 03:12:44.594795, 2020-10-19 03:12:44.594795, 1, t, module_l10n_tw_standard_ifrss -13, base, ir.module.module, 403).
+2020-10-19 11:12:44 CST STATEMENT:  INSERT INTO "ir_model_data" ("id", "create_uid", "create_date", "write_uid", "write_date", "model", "module", "name", "noupdate", "res_id") VALUES (nextval('ir_model_data_id_seq'), 1, (now() at time zone 'UTC'), 1, (now() at time zone 'UTC'), 'ir.module.module', 'base', 'module_l10n_tw_standard_ifrss -13', true, 403) RETURNING id
+2020-10-19 11:14:35 CST ERROR:  new row for relation "ir_model_data" violates check constraint "ir_model_data_name_nospaces"
+2020-10-19 11:14:35 CST DETAIL:  Failing row contains (5260, 1, 2020-10-19 03:14:34.981079, 2020-10-19 03:14:34.981079, 1, t, module_l10n_tw_standard_ifrss -13, base, ir.module.module, 404).
+2020-10-19 11:14:35 CST STATEMENT:  INSERT INTO "ir_model_data" ("id", "create_uid", "create_date", "write_uid", "write_date", "model", "module", "name", "noupdate", "res_id") VALUES (nextval('ir_model_data_id_seq'), 1, (now() at time zone 'UTC'), 1, (now() at time zone 'UTC'), 'ir.module.module', 'base', 'module_l10n_tw_standard_ifrss -13', true, 404) RETURNING id
+2020-10-19 11:16:02 CST ERROR:  new row for relation "ir_model_data" violates check constraint "ir_model_data_name_nospaces"
+2020-10-19 11:16:02 CST DETAIL:  Failing row contains (5261, 1, 2020-10-19 03:16:02.609335, 2020-10-19 03:16:02.609335, 1, t, module_l10n_tw_standard_ifrss -13, base, ir.module.module, 405).
+2020-10-19 11:16:02 CST STATEMENT:  INSERT INTO "ir_model_data" ("id", "create_uid", "create_date", "write_uid", "write_date", "model", "module", "name", "noupdate", "res_id") VALUES (nextval('ir_model_data_id_seq'), 1, (now() at time zone 'UTC'), 1, (now() at time zone 'UTC'), 'ir.module.module', 'base', 'module_l10n_tw_standard_ifrss -13', true, 405) RETURNING id
+2020-10-19 11:18:07 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-10-19 11:18:07 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-10-19 11:18:07 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-10-19 11:24:35 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-10-19 11:24:35 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-10-19 11:24:35 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-10-19 11:24:35 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-10-19 11:24:35 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-10-19 11:24:35 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-10-19 11:26:23 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-10-19 11:26:23 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-10-19 11:26:23 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-10-19 11:27:38 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-10-19 11:27:38 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-10-19 11:27:38 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-10-19 11:27:38 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-10-19 11:27:38 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-10-19 11:32:39 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-10-19 11:32:39 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-10-19 11:32:39 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-10-19 11:32:39 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-10-19 11:32:39 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-10-19 11:32:39 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-10-19 11:53:31 CST ERROR:  new row for relation "ir_model_data" violates check constraint "ir_model_data_name_nospaces"
+2020-10-19 11:53:31 CST DETAIL:  Failing row contains (12500, 2, 2020-10-19 03:53:28.79717, 2020-10-19 03:53:28.79717, 2, t, module_l10n_tw_standard_ifrss -13, base, ir.module.module, 407).
+2020-10-19 11:53:31 CST STATEMENT:  INSERT INTO "ir_model_data" ("id", "create_uid", "create_date", "write_uid", "write_date", "model", "module", "name", "noupdate", "res_id") VALUES (nextval('ir_model_data_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), 'ir.module.module', 'base', 'module_l10n_tw_standard_ifrss -13', true, 407) RETURNING id
+2020-10-19 13:31:49 CST ERROR:  new row for relation "ir_model_data" violates check constraint "ir_model_data_name_nospaces"
+2020-10-19 13:31:49 CST DETAIL:  Failing row contains (12502, 2, 2020-10-19 05:31:49.165807, 2020-10-19 05:31:49.165807, 2, t, module_l10n_tw_standard_ifrss -13, base, ir.module.module, 409).
+2020-10-19 13:31:49 CST STATEMENT:  INSERT INTO "ir_model_data" ("id", "create_uid", "create_date", "write_uid", "write_date", "model", "module", "name", "noupdate", "res_id") VALUES (nextval('ir_model_data_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), 'ir.module.module', 'base', 'module_l10n_tw_standard_ifrss -13', true, 409) RETURNING id
+2020-10-19 13:32:57 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-10-19 13:32:57 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-10-19 13:32:57 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-10-19 13:32:57 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-10-19 13:32:57 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-10-19 13:35:54 CST ERROR:  new row for relation "ir_model_data" violates check constraint "ir_model_data_name_nospaces"
+2020-10-19 13:35:54 CST DETAIL:  Failing row contains (12503, 2, 2020-10-19 05:35:54.488394, 2020-10-19 05:35:54.488394, 2, t, module_l10n_tw_standard_ifrss -13, base, ir.module.module, 410).
+2020-10-19 13:35:54 CST STATEMENT:  INSERT INTO "ir_model_data" ("id", "create_uid", "create_date", "write_uid", "write_date", "model", "module", "name", "noupdate", "res_id") VALUES (nextval('ir_model_data_id_seq'), 2, (now() at time zone 'UTC'), 2, (now() at time zone 'UTC'), 'ir.module.module', 'base', 'module_l10n_tw_standard_ifrss -13', true, 410) RETURNING id
+2020-10-19 13:37:03 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-10-19 13:37:03 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-10-19 13:37:03 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-10-19 13:37:03 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-10-19 13:37:03 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	

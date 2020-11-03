@@ -1,0 +1,59 @@
+2020-09-14 17:22:28 CST FATAL:  the database system is starting up
+2020-09-14 17:22:28 CST LOG:  database system was shut down at 2020-09-14 17:21:43 CST
+2020-09-14 17:22:29 CST LOG:  MultiXact member wraparound protections are now enabled
+2020-09-14 17:22:30 CST FATAL:  the database system is starting up
+2020-09-14 17:22:30 CST LOG:  database system is ready to accept connections
+2020-09-14 17:22:30 CST LOG:  autovacuum launcher started
+2020-09-14 17:34:09 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 17:34:09 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 17:34:09 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 17:41:33 CST ERROR:  could not serialize access due to concurrent update
+2020-09-14 17:41:33 CST STATEMENT:  UPDATE "mail_channel_partner" SET "write_uid"=2,"seen_message_id"=6,"write_date"=(now() at time zone 'UTC') WHERE id IN (2)
+2020-09-14 17:44:01 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 17:44:01 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 17:44:01 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 17:44:01 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 17:44:01 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 17:44:01 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 17:44:01 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 17:49:10 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 17:49:10 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 17:49:10 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 17:49:10 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 17:49:10 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 17:49:10 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 18:15:12 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 18:15:12 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 18:15:12 CST LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-09-14 18:15:14 CST LOG:  received fast shutdown request
+2020-09-14 18:15:14 CST LOG:  aborting any active transactions
+2020-09-14 18:15:14 CST FATAL:  terminating connection due to administrator command
+2020-09-14 18:15:14 CST FATAL:  terminating connection due to administrator command
+2020-09-14 18:15:14 CST FATAL:  terminating connection due to administrator command
+2020-09-14 18:15:14 CST FATAL:  terminating connection due to administrator command
+2020-09-14 18:15:14 CST FATAL:  terminating connection due to administrator command
+2020-09-14 18:15:14 CST FATAL:  terminating connection due to administrator command
+2020-09-14 18:15:14 CST LOG:  autovacuum launcher shutting down
+2020-09-14 18:15:14 CST ERROR:  canceling statement due to user request
+2020-09-14 18:15:14 CST LOG:  autovacuum launcher shutting down
+2020-09-14 18:15:14 CST LOG:  shutting down
+2020-09-14 18:15:14 CST LOG:  database system is shut down

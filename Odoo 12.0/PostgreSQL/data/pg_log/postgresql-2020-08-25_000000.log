@@ -1,0 +1,16 @@
+2020-08-26 17:13:04 CST ERROR:  operator does not exist: text = integer at character 1126
+2020-08-26 17:13:04 CST HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+2020-08-26 17:13:04 CST STATEMENT:  SELECT count(1) FROM "account_analytic_account" LEFT JOIN 
+	                (SELECT res_id, value FROM "ir_translation"
+	                 WHERE type='model' AND name='account.analytic.account,name' AND lang='en_US' AND value!='')
+	             as "account_analytic_account__name" ON ("account_analytic_account"."id" = "account_analytic_account__name"."res_id") WHERE (("account_analytic_account"."active" = true)  AND  ("account_analytic_account"."name" IS NOT NULL  AND  ("account_analytic_account"."id" in (WITH temp_irt_current (id, name) as (
+	                            SELECT ct.id, coalesce(it.value,ct."name")
+	                            FROM account_analytic_account ct
+	                            LEFT JOIN ir_translation it ON (it.name = 'account.analytic.account,name' and
+	                                        it.lang = 'en_US' and
+	                                        it.type = 'model' and
+	                                        it.res_id = ct.id and
+	                                        it.value != '')
+	                            )
+	                            SELECT id FROM temp_irt_current WHERE name = 1 order by name
+	                            )))) AND ("account_analytic_account"."company_id" IS NULL   OR  ("account_analytic_account"."company_id" in (1)))

@@ -1,0 +1,11 @@
+2020-09-17 17:33:46 CST ERROR:  duplicate key value violates unique constraint "res_partner_bank_unique_number"
+2020-09-17 17:33:46 CST DETAIL:  Key (sanitized_acc_number, company_id)=(00753125980, 1) already exists.
+2020-09-17 17:33:46 CST STATEMENT:  UPDATE "res_partner_bank" SET "sanitized_acc_number"='00753125980',"write_uid"=2,"write_date"=(now() at time zone 'UTC') WHERE id IN (3)
+2020-09-17 17:37:51 CST ERROR:  could not obtain lock on row in relation "ir_cron"
+2020-09-17 17:37:51 CST STATEMENT:  SELECT *
+	                                       FROM ir_cron
+	                                       WHERE numbercall != 0
+	                                          AND active
+	                                          AND nextcall <= (now() at time zone 'UTC')
+	                                          AND id=11
+	                                       FOR UPDATE NOWAIT

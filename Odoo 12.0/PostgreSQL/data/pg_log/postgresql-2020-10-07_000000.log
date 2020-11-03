@@ -1,0 +1,24 @@
+2020-10-07 18:28:26 CST ERROR:  could not obtain lock on row in relation "ir_cron"
+2020-10-07 18:28:26 CST STATEMENT:  SELECT *
+	                                       FROM ir_cron
+	                                       WHERE numbercall != 0
+	                                          AND active
+	                                          AND nextcall <= (now() at time zone 'UTC')
+	                                          AND id=14
+	                                       FOR UPDATE NOWAIT
+2020-10-07 20:37:25 CST ERROR:  could not obtain lock on row in relation "ir_cron"
+2020-10-07 20:37:25 CST STATEMENT:  SELECT *
+	                                       FROM ir_cron
+	                                       WHERE numbercall != 0
+	                                          AND active
+	                                          AND nextcall <= (now() at time zone 'UTC')
+	                                          AND id=2
+	                                       FOR UPDATE NOWAIT
+2020-10-07 20:37:25 CST ERROR:  could not obtain lock on row in relation "ir_cron"
+2020-10-07 20:37:25 CST STATEMENT:  SELECT *
+	                                       FROM ir_cron
+	                                       WHERE numbercall != 0
+	                                          AND active
+	                                          AND nextcall <= (now() at time zone 'UTC')
+	                                          AND id=8
+	                                       FOR UPDATE NOWAIT

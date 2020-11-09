@@ -120,17 +120,14 @@
 
                 <table class='receipt-paymentlines'>
                     <colgroup>
-                        <col width='38%' />
-                        <col width='20%' />
-                        <col width='13%' />
-                        <col width='29%' />
+                        <col width='60%' />
+                        <col width='10%' />
+                        <col width='30%' />
                     </colgroup>
                     <t t-foreach="paymentlines" t-as="line">
                       <tr>
                           <td>
                               <t t-esc="line.name"/>
-                          </td>
-                          <td>
                           </td>
                           <td>
                           </td>
@@ -143,19 +140,19 @@
                 <br/>
                 <table class='receipt-change'>
                     <colgroup>
-                        <col width='40%' />
-                        <col width='15%' />
-                        <col width='15%' />
+                        <col width='60%' />
+                        <col width='10%' />
                         <col width='30%' />
                     </colgroup>
-                    <tr><td>Change:</td>
-                         <td>
-                          </td>
-                          <td>
-                          </td>
+                    <tr>
+                        <td>Change:
+                        </td>
+                        <td>
+                        </td>
                         <td style='text-align:right'>
                         <t t-esc="widget.format_currency(order.get_change())"/>
-                        </td></tr>
+                        </td>
+                    </tr>
                 </table>
             </div>
         </t>

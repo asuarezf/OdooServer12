@@ -28,9 +28,9 @@
                     </t>
 
                     <t t-if="widget.pos.company.email">
-                        Email: <div style="width:100%;text-align:left;"><t t-esc="widget.pos.company.email"/></div>
+                        <div style="width:100%;text-align:left;"><t t-esc="widget.pos.company.email"/></div>
                     </t>
-                    <t t-esc="order.name"/>
+                    <t t-esc="order.name"/><br/>
                     <t t-esc="moment().format('L LT')"/>
                 </div>
                 <br/>
@@ -44,19 +44,19 @@
 
                 <table class='receipt-orderlines'>
                     <colgroup>
-                        <col width='36%' />
-                        <col width='12%' />
-                        <col width='22%' />
-                        <col width='30%' />
+                        <col width='40%' />
+                        <col width='10%' />
+                        <col width='20%' />
+                        <col width='20%' />
                     </colgroup>
                     <tr style="border: 1px solid rgb(0, 0, 0);">
-                        <th>Name</th>
-                        <th>Qty</th>
-                        <th>Price</th>
-                        <th>Value</th>
+                        <th style='text-align:center'>Name</th>
+                        <th style='text-align:center'>Qty</th>
+                        <th style='text-align:center'>Price</th>
+                        <th style='text-align:center'>Value</th>
                     </tr>
                     <tr t-foreach="orderlines" t-as="orderline">
-                        <td>
+                        <td style='text-align:center'>
                             <t t-esc="orderline.get_product().display_name"/>
                              <t t-if="orderline.get_discount() > 0">
                                 <div class="pos-disc-font">
@@ -64,17 +64,17 @@
                                 </div>
                             </t>
                         </td>
-                        <td>
+                        <td style='text-align:center'>
                             <t t-esc="orderline.quantityStr"/>
                         </td>
-                        <td>
+                        <td style='text-align:center'>
                             <t t-set="a" t-value="orderline.quantityStr"></t>
                             <t t-set="b" t-value="orderline.get_display_price()"></t>
                             <t t-set="c" t-value="b/a"></t>
                             <t t-esc="c"/>
                         </td>
-                        <td style='text-align:right'>
-                            <t t-esc="widget.format_currency(orderline.get_display_price())"/>
+                        <td style='text-align:center'>
+                            <t t-esc="orderline.get_display_price()"/>
                         </td>
                     </tr>
                 </table>
@@ -127,7 +127,7 @@
                     <t t-foreach="paymentlines" t-as="line">
                       <tr>
                           <td>
-                              <t t-esc="line.name"/>
+                              Payment:
                           </td>
                           <td>
                           </td>
@@ -154,6 +154,10 @@
                         </td>
                     </tr>
                 </table>
+               <br/>
+               <br/>
+               <br/>
+               <td style='text-align:center'>.</td>
             </div>
         </t>
     </t>

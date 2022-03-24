@@ -1,0 +1,143 @@
+.invoiceContainer{
+    font-family: "Times New Roman", Times, serif;
+}
+.invoiceContainer .invoice_inner{
+    width:4.8cm;
+    font-size: 13px;
+    background-color: white;
+    display: inline-block;
+    margin-left: -0.5cm;
+}
+.invoiceContainer .invoice_inner .invoice{
+    width:4.8cm;
+    height:9cm;
+    text-align:center;
+    padding:5px;
+    padding-bottom:15px;
+    overflow: hidden;
+    background-color: white;
+}
+.invoice h1{
+    font-size:17px;
+    line-height:1.2;
+    max-height:68px;
+    overflow:hidden;
+    font-weight:bold;
+    margin:0px;
+}
+.invoice h2{
+    font-size:18px;
+    font-weight:bold;
+    line-height:1;
+    margin:5px 0 4px;
+}
+.invoice h3{
+    font-size:23px;
+    margin:0 0 2px 0;
+    line-height:1;
+    font-weight:bold;
+}
+.invoice ul, .invoice_details ul {
+    margin: 0px;
+    padding: 0px;
+    overflow:hidden;
+}
+.invoice ul li, .invoice_details ul li{
+    color:#333;
+    margin:0 0 3px 0!important;
+    line-height:18px;
+    font-size:13px;
+    overflow:hidden;
+    list-style:none !important;
+    width:100%;
+    text-align:left;
+}
+.invoice span.left{
+  margin:0 0 3px 0!important;
+  line-height:18px;
+  font-size:13px;
+  float:left;
+  color:#333;
+}
+
+.invoice span.leftalone{
+  margin:0 0 3px 0!important;
+  line-height:18px;
+  font-size:13px;
+  float:left;
+  color:#333;
+  display: block;
+}
+
+.invoice span.right{
+  margin:0 0 3px 0!important;
+  line-height:18px;
+  font-size:13px;
+  float:right;
+  color:#333;
+  display: block;
+}
+
+.invoice li span.left, .invoice_details ul li span.left{
+    font-size:13px;
+    float:left;
+}
+.invoice li span.right, .invoice_details ul li span.right{
+    font-size:13px;
+    float:right;
+    text-align:right;
+}
+.invoice .QRCode img{
+    margin:0px 0px;
+}
+.invoiceContainer .invoice_inner .invoice_details{
+    width:4.8cm;
+    padding:5px;
+    text-align:center;
+    background-color: white;
+}
+.invoice_details h2{
+    margin:0;
+    font-size:21px;
+    font-weight:bold;
+    margin:5px 0 10px 0;
+}
+.invoice_details ul{
+    border-bottom:1px dashed #333;
+    margin-bottom:10px;
+}
+.invoice_details .table{
+    border:none;
+    border-bottom:1px dashed #333;
+    margin-bottom:5px;
+}
+.invoice_details .table tr td, .invoice_details .table tr th{
+    border:none;
+    font-size:11px;
+    padding:0;
+    text-align:left;
+    padding:3px;
+}
+.invoice_details .table tr th{
+    text-align:center;
+}
+.invoice_details h4{
+    text-align:left;
+    margin:0;
+    font-size:13px;
+    font-weight:bold;
+}
+.record ul{
+    margin-top:20px;
+    margin-left:25px;
+}
+.record ul li{
+    color:#555;
+    list-style: outside disc;
+    line-height:22px;
+}
+.li {
+    float: left;
+    margin: 10px;
+    list-style: none;
+}
